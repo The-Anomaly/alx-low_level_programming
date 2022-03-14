@@ -3,12 +3,7 @@
 #include <stdio.h>
 
 /**
- * main - find the last digit of a random number
- * and make comparisons
- *
- * @n: random number
- *
- * Description: generate a random number and
+ * main - generate a random number and
  * find its last digit, then check if the
  * last digit is greater than 5, equal to 0
  * or otherwise
