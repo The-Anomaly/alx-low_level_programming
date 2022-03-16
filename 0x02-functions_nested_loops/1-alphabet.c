@@ -3,9 +3,9 @@
 /**
 * print_alphabets - print alphabets
 *
-*
+* Return: void
 */
-void print_alphabets(void)
+void print_alphabet(void)
 {
 	char alphabet = 'a';
 
