@@ -5,7 +5,7 @@
 * fibonacci - prints first 50 numbers
 * in the fibonacci sequence starting from 1 and 2
 */
-void fibonacci(void)
+int main(void)
 {
 	int i = 0, j = 1, k = 2, old = 0;
 
@@ -21,4 +21,5 @@ void fibonacci(void)
 		k = k + old;
 	}
 	printf("\n");
+	return (0);
 }
