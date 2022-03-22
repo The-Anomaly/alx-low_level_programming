@@ -8,13 +8,19 @@
 void _puts(char *str)
 {
 	char val;
-	int count = 0;
+	int count = 0, lim, i;
 
 	while (val != '\0')
 	{
 		val = *(str + count);
-		_putchar(val);
 		count++;
+	}
+
+	lim = count;
+
+	for (i = 0; i < lim - 1; i++)
+	{
+		_putchar(*(str + i));
 	}
 	_putchar('\n');
 }
