@@ -18,7 +18,10 @@ char *cap_string(char *s)
 			for (i = 0; i < n; i++)
 			{
 				if (s[count - 1] == sep[i])
+				{
 					s[count] = s[count] - 32;
+					break;
+				}
 			}
 		}
 		count++;
