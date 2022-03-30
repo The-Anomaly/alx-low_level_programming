@@ -7,7 +7,7 @@
 */
 void print_chessboard(char (*a)[8])
 {
-	long unsigned int i = 0, j = 0;
+	unsigned long int i = 0, j = 0;
 
 	while (i < sizeof(a))
 	{
