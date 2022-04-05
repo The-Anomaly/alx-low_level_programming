@@ -9,7 +9,7 @@
 */
 char *str_concat(char *s1, char *s2)
 {
-	int i = 0, j = 0, k = 0, l = 0, len = 0;
+	int i = 0, j = 0, k = 0, l = 0;
 	char *cat;
 
 	if (s1 != NULL)
@@ -24,16 +24,13 @@ char *str_concat(char *s1, char *s2)
 			j++;
 		}
 
-	if (i > 0 && j > 0)
-		len = i + j - 1;
-	else
-		len = i + j;
-
 	cat = malloc(sizeof(char) * i + j + 1);
 
 	if (cat == NULL)
+	{
 		free(cat);
 		return (NULL);
+	}
 
 	for (k = 0; k < i + j; k++)
 	{
