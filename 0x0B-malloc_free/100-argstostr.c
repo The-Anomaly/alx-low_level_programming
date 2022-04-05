@@ -11,12 +11,22 @@
 char *argstostr(int ac, char **av)
 {
 	char *str;
-	int j, k, l;
+	int i, j, k, l, count;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
-	str = malloc(sizeof(char) * (ac + 1));
+	count = 0;
+	for (i = 0; av[i]; i++)
+	{
+		if (av[i] == NULL)
+			return (NULL);
+		for (j = 0; av[i][j]; j++)
+			count++;
+	}
+
+	printf("%d", count);
+	str = malloc(sizeof(char) * (count + 1));
 
 	if (str == NULL)
 	{
@@ -24,14 +34,12 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	}
 
-	j = 1;
+	j = 0;
 	l = 0;
 
 	while (av[j])
 	{
 		k = 0;
-		if (av[j] == NULL)
-			return (NULL);
 		while (av[j][k])
 		{
 			str[l] = av[j][k];
