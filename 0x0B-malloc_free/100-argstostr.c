@@ -26,7 +26,6 @@ char *argstostr(int ac, char **av)
 	}
 
 	str = malloc(sizeof(char) * (count + 1));
-
 	if (str == NULL)
 	{
 		free(str);
@@ -35,7 +34,6 @@ char *argstostr(int ac, char **av)
 
 	j = 0;
 	l = 0;
-
 	while (av[j])
 	{
 		k = 0;
