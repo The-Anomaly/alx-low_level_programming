@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
 * argstostr - concatenate arguments into a string
@@ -25,7 +24,6 @@ char *argstostr(int ac, char **av)
 			count++;
 	}
 
-	printf("%d", count);
 	str = malloc(sizeof(char) * (count + 1));
 
 	if (str == NULL)
