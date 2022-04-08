@@ -36,7 +36,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (newstr == NULL)
 	{
 		free(newstr);
-		return (NULL);
+		return (0);
 	}
 
 	for (j = 0; j < num; j++)
