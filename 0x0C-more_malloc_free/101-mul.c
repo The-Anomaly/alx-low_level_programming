@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
 
 /**
 * check_num - check if a string contains only digits
@@ -13,7 +12,7 @@ void check_num(char *num)
 
 	for (i = 0; num[i] != '\0'; i++)
 	{
-		if (!isdigit(num[i]))
+		if (num[i] < 48 || num[i] > 57)
 		{
 			printf("Error\n");
 			exit(98);
@@ -29,7 +28,7 @@ void check_num(char *num)
 */
 int main(int argc, char *argv[])
 {
-	long int res = 1;
+	unsigned long res = 1;
 
 	if (argc != 3)
 	{
@@ -39,7 +38,8 @@ int main(int argc, char *argv[])
 
 	check_num(argv[1]);
 	check_num(argv[2]);
-	res = atoi(argv[1]) * atoi(argv[2]);
-	printf("%ld\n", res);
+
+	res = atol(argv[1]) * atol(argv[2]);
+	printf("%lu\n", res);
 	return (0);
 }
