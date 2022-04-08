@@ -34,7 +34,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	newstr =  malloc(num + 1);
 
 	if (newstr == NULL)
+	{
 		free(newstr);
+		return (NULL);
+	}
 
 	for (j = 0; j < num; j++)
 	{
