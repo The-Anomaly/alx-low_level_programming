@@ -38,9 +38,11 @@ void print_float(double num)
 void print_string(char *s)
 {
 	if (s == NULL)
+	{
 		printf("%s", "(nil)");
-	else
-		printf("%s", s);
+		return;
+	}
+	printf("%s", s);
 }
 
 /**
