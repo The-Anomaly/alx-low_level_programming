@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
-* add_node - adds a new node at the beginning of a list
+* add_nodeint - adds a new node at the beginning of a list
 * @head: pointer to a pointer to the input list
 * @n: input integer
 * Return: address of the new element
@@ -20,6 +20,5 @@ listint_t *add_nodeint(listint_t **head, const int n)
 	newlist->next = *head;
 
 	*head =  newlist;
-
 	return (*head);
 }
